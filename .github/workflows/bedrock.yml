@@ -21,3 +21,4 @@ jobs:
         run: |
           cd PocketMine-MP
           ./start.sh
+          
