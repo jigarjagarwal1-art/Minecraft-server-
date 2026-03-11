@@ -1,4 +1,4 @@
-# name: Bedrock Server
+ name: Bedrock Server
 
 on: workflow_dispatch
 
