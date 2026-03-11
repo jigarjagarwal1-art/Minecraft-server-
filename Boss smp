@@ -1,0 +1,23 @@
+name: Bedrock Server
+
+on: workflow_dispatch
+
+jobs:
+  server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y wget unzip php-cli
+
+      - name: Download PocketMine
+        run: |
+          wget https://get.pmmp.io
+          bash get.pmmp.io --no-interaction
+
+      - name: Start Server
+        run: |
+          cd PocketMine-MP
+          ./start.sh
